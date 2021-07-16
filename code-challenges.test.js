@@ -12,11 +12,24 @@
 // Run the file with the following command:
 // $ yarn jest
 
+
+// REMEMBER TO PSEUDO CODE GALADOE!!!!
+
+
 // Reminder: The test will call your function
 
 // --------------------1) Create a function that takes a number as an argument and decides if the number is evenly divisble by three or not.
 
 // a) Create a test with expect statements for each of the variables provided.
+describe("divisbleByThree", () => {
+  it("evenly divisble by three", () => {
+    expect(divisbleByThree(15)).toEqual("15 is divisible by three")
+    expect(divisbleByThree(0)).toEqual("0 is divisible by three")
+  })
+  it("not evenly divisble by three", () => {
+    expect(divisbleByThree(-7)).toEqual("-7 is not divisible by three")
+  })
+})
 
 var num1 = 15
 // Expected output: "15 is divisible by three"
@@ -28,14 +41,28 @@ var num3 = -7
 // Expected output: "-7 is not divisible by three"
 
 
-
 // b) Create the function that makes the test pass.
-
+ const divisbleByThree = (num) =>{
+   if(num % 3 === 0){
+     return `${num} is divisible by three`
+   }else{
+     return `${num} is not divisible by three`
+   }
+ }
 
 
 // --------------------2) Create a function that takes in an array of words and returns an array with all the words capitalized.
 
 // a) Create a test with expect statements for each of the variables provided.
+
+describe("capitalized", () => {
+  it("words capitalized", () => {
+    expect(wordCapital(randomNouns1)).toEqual(["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"])
+    expect(wordCapital(randomNouns2)).toEqual(["Temperature", "Database", "Chopsticks", "Mango", "Deduction"])
+  })
+})
+
+
 
 var randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"]
 // Expected output: ["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"]
@@ -43,9 +70,14 @@ var randomNouns1 = ["streetlamp", "potato", "teeth", "conclusion", "nephew"]
 var randomNouns2 = ["temperature", "database", "chopsticks", "mango", "deduction"]
 // Expected output: ["Temperature", "Database", "Chopsticks", "Mango", "Deduction"]
 
-
-
 // b) Create the function that makes the test pass.
+const wordCapital = (array) => {
+  return array.map(value => {
+    return value[0].toUpperCase() + value.slice(1)
+  })
+}
+console.log(wordCapital(randomNouns1));
+console.log(wordCapital(randomNouns2));
 
 
 
@@ -53,6 +85,13 @@ var randomNouns2 = ["temperature", "database", "chopsticks", "mango", "deduction
 
 // a) Create a test with expect statements for each of the variables provided.
 
+describe("firstVowel", () => {
+  it("takes string and returns first vowel", () =>{
+    expect(firstVowel(vowelTester1)).toEqual(1)
+    expect(firstVowel(vowelTester2)).toEqual(0)
+    expect(firstVowel(vowelTester3)).toEqual(2)
+  })
+})
 var vowelTester1 = "learn"
 // Expected output: 1
 var vowelTester2 = "academy"
@@ -60,6 +99,12 @@ var vowelTester2 = "academy"
 var vowelTester3 = "challenge"
 // Expected output: 2
 
-
+//create function that takes in string
+// string is going to be iterated through until the first vowel is found
+//when the first vowel is found, return the position
 
 // b) Create the function that makes the test pass.
+const firstVowel = (string) => {
+  
+
+}
