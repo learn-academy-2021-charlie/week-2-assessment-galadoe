@@ -126,8 +126,7 @@ var vowelTester3 = "challenge"
 //when the first vowel is found, return the position
 // b) Create the function that makes the test pass.
 const firstVowel = (string) => {
-  return string.filter(value => {
-    return value.indexOf("a", "e", "i", "o", "u")
-  })
+  let vowel = []
+  let stringSplit = string.split("")
 }
 console.log(firstVowel(vowelTester2));
