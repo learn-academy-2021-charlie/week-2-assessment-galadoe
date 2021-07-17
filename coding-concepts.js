@@ -13,7 +13,7 @@ console.log(cohort.split(""))
 // a) Your answer: "C", "h", "a", "r", "l", "i", "e", " ", "2", "0", "2", "1"
 // b) Verify and explain: ['C', 'h', 'a', 'r',
 //                        'l', 'i', 'e', ' ',
-//                        '2', '0', '2', '1']
+//                        '2', '0', '2', '1']: This is because, .split() method turns a string into an array, so that's why an array of the word we returned but split
 
 
 // --------------------2) What will this log?
@@ -58,4 +58,4 @@ var learnStudent = new Learn
 console.log(learnStudent)
 
 // a) Your answer: George Charlie 2021
-// b) Verify and explain: {student: 'George', cohort: 'Charlie', year: 2021}
+// b) Verify and explain: {student: 'George', cohort: 'Charlie', year: 2021}. To be honest, I wasn't paying much attention to 'this' and what was attached to it

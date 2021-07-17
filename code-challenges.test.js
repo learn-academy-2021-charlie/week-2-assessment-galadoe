@@ -21,6 +21,11 @@
 // --------------------1) Create a function that takes a number as an argument and decides if the number is evenly divisble by three or not.
 
 // a) Create a test with expect statements for each of the variables provided.
+
+//Create a test with expect statements for each of the variables provided.
+//create a describe method that explains the test
+//create and it method explain what the test do
+//next, create a function (divisbleByThree) with/without an argument and compare
 describe("divisbleByThree", () => {
   it("evenly divisble by three", () => {
     expect(divisbleByThree(15)).toEqual("15 is divisible by three")
@@ -42,6 +47,11 @@ var num3 = -7
 
 
 // b) Create the function that makes the test pass.
+
+//Create a function that takes in a num
+//the num is checked if it is divisible by divisible by three
+// if it is divisible by three, return "num is divisible by three"
+// if not, return "num is not divisible by three"
  const divisbleByThree = (num) =>{
    if(num % 3 === 0){
      return `${num} is divisible by three`
@@ -55,6 +65,10 @@ var num3 = -7
 
 // a) Create a test with expect statements for each of the variables provided.
 
+//Create a test with expect statements for each of the variables provided.
+//create a describe method that explains the test
+//create and it method explain what the test do
+//next, create a function (wordCapital) with/without an argument and compare
 describe("capitalized", () => {
   it("words capitalized", () => {
     expect(wordCapital(randomNouns1)).toEqual(["Streetlamp", "Potato", "Teeth", "Conclusion", "Nephew"])
@@ -71,6 +85,10 @@ var randomNouns2 = ["temperature", "database", "chopsticks", "mango", "deduction
 // Expected output: ["Temperature", "Database", "Chopsticks", "Mango", "Deduction"]
 
 // b) Create the function that makes the test pass.
+
+//create function that takes in array
+//iterate through the array and only capitalized the first letter
+//after the first letter is capitalized, make sure the other words follow as well (make sure to return it so it doesn't return udefined)
 const wordCapital = (array) => {
   return array.map(value => {
     return value[0].toUpperCase() + value.slice(1)
@@ -85,6 +103,10 @@ console.log(wordCapital(randomNouns2));
 
 // a) Create a test with expect statements for each of the variables provided.
 
+//Create a test with expect statements for each of the variables provided.
+//create a describe method that explains the test
+//create and it method explain what the test do
+//next, create a function with/without an argument and compare
 describe("firstVowel", () => {
   it("takes string and returns first vowel", () =>{
     expect(firstVowel(vowelTester1)).toEqual(1)
@@ -102,9 +124,10 @@ var vowelTester3 = "challenge"
 //create function that takes in string
 // string is going to be iterated through until the first vowel is found
 //when the first vowel is found, return the position
-
 // b) Create the function that makes the test pass.
 const firstVowel = (string) => {
-  
-
+  return string.filter(value => {
+    return value.indexOf("a", "e", "i", "o", "u")
+  })
 }
+console.log(firstVowel(vowelTester2));
