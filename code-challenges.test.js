@@ -122,11 +122,17 @@ var vowelTester3 = "challenge"
 // Expected output: 2
 
 //create function that takes in string
-// string is going to be iterated through until the first vowel is found
+// string is going to be iterated (using a for loop might help) through until the first vowel is found
 //when the first vowel is found, return the position
 // b) Create the function that makes the test pass.
 const firstVowel = (string) => {
-  let vowel = []
-  let stringSplit = string.split("")
+  let array = string.split("")
+  for(let i=0; i < array.length; i++){
+    if(array[i] === "a" || array[i] === "e" || array[i] === "i" || array[i] === "o" || array[i] === "u"){
+      return array.indexOf(array[i])
+    }
+  }
 }
+console.log(firstVowel(vowelTester1));
 console.log(firstVowel(vowelTester2));
+console.log(firstVowel(vowelTester3));
